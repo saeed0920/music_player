@@ -1,0 +1,212 @@
+// * main
+.main {
+  background-color: var(--color-primery);
+  height: 70vh;
+  width: 40vh;
+  border-radius: 4.5rem;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.1);
+}
+
+// * navbar
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+
+  &__back-icon {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    margin-left: 3rem;
+    border-radius: 50%;
+    background-color: var(--color-Grey-light-3);
+    height: 4.5rem;
+    width: 4.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover > .nav__svg {
+      transform: scale(1.2) translateX(-0.1px);
+    }
+  }
+  &__svg {
+    height: 3rem;
+    width: 3rem;
+    fill: #48dbfb;
+    transition: all 0.2s;
+  }
+
+  &__text-center {
+    transform: translateX(-2rem);
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+
+  &__menu {
+    margin-right: 2rem;
+    height: 2rem;
+    width: 2rem;
+    background-color: var(--color-primery);
+    // cursor: pointer;
+  }
+
+  &__span {
+    display: block;
+    height: 0.3rem;
+    width: 4rem;
+    background-color: var(--color-Grey-light-4);
+    position: relative;
+    transition: all 0.2s;
+    transform: translateX(-4rem) translateY(0.5rem);
+    cursor: pointer;
+    &::after {
+      content: "";
+      top: 1rem;
+      display: block;
+      position: absolute;
+      height: 0.3rem;
+      width: 4rem;
+      background-color: var(--color-Grey-light-4);
+      transition: all 0.2s;
+    }
+
+    &::before {
+      content: "";
+      top: -1rem;
+      display: block;
+      position: absolute;
+      height: 0.3rem;
+      width: 4rem;
+      transition: all 0.2s;
+      background-color: var(--color-Grey-light-4);
+    }
+  }
+}
+// * content
+.content {
+  display: flex;
+  margin-top: 5rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &:hover > &__cir-big > &__cir-small {
+    transform: scale(0.97);
+  }
+  &__cir-big {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: var(--color-Grey-light-3);
+    height: 30rem;
+    width: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__cir-small {
+    transition: all 0.2s;
+    border-radius: 50%;
+    height: 28rem;
+    width: 28rem;
+    background-image: url(/img/content_img.jpg);
+    background-size: cover;
+    z-index: 99999;
+  }
+}
+
+// * text
+
+.text {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__name {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: cursive;
+    margin-bottom: 0.5rem;
+  }
+
+  &__name-2 {
+    text-align: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 100;
+  }
+}
+
+// * gray
+
+.line {
+  // width: 30rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover > &__container > &__gray {
+    box-shadow: inset 0rem -2rem 0em rgba(#54a0ff, 0.8);
+    transform: scale(1.1);
+  }
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 3rem;
+    overflow: hidden;
+    width: 30rem;
+    background-color: var(--color-Grey-light-1);
+  }
+
+  &__gray {
+    box-shadow: inset 0 0 0 rgba(#54a0ff, 0.8);
+    width: 18rem;
+    height: 2rem;
+    background-color: #48dbfb;
+    transition: all 0.2s ease-out;
+  }
+}
+
+// * menu-btn
+
+.menu-btn {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__icon {
+    cursor: pointer;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    background-color: #48dbfb;
+    transition: all 0.2s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:last-child {
+      margin-right: 2rem;
+    }
+    &:first-child {
+      margin-left: 2rem;
+    }
+
+    &__svg {
+      height: 3rem;
+      width: 3rem;
+    }
+    &__svg-red {
+      height: 3rem;
+      width: 3rem;
+      fill: red;
+    }
+  }
+}
