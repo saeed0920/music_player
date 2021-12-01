@@ -113,6 +113,21 @@
     background-image: url(/img/content_img.jpg);
     background-size: cover;
     z-index: 99999;
+    position: relative;
+    overflow: hidden;
+    &-span {
+      content: "";
+      position: absolute;
+      top: 13rem;
+      left: 50%;
+      margin-left: -25rem;
+      width: 50rem;
+      height: 50rem;
+      opacity: 0.5;
+      border-radius: 41%;
+      background-color: #54a0ff;
+      animation: cir 5s infinite linear;
+    }
   }
 }
 
